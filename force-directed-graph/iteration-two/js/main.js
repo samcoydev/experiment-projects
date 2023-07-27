@@ -205,7 +205,7 @@ function createEdgeElement(edge) {
 // Calculate forces between nodes
 const attractionK = .01;
 function calculateForces() {
-    const k = 200; // Repulsive force constant
+    const k = 300; // Repulsive force constant
 
     nodes.forEach((node, i) => {
         if (dragging && dragNode === node) return;

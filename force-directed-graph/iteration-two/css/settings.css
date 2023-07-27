@@ -1,7 +1,9 @@
 .settings {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .settings button {
@@ -89,6 +91,7 @@ button.danger {
     right: 0;
     bottom: 0;
     background-color: var(--secondary);
+    outline: 1px solid var(--background);
     border-radius: 34px;
     transition: .4s;
 }
@@ -110,7 +113,8 @@ button.danger {
 }
 
 input:checked + .slider {
-    background-color: var(--primary)
+    background-color: var(--success-muted);
+    outline: 1px solid var(--success);
 }
 
 input:focus + .slider {
