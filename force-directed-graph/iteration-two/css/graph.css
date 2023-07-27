@@ -1,0 +1,88 @@
+.node-group {
+    position: relative;
+    z-index: 2
+}
+
+.node {
+    display: flex;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: transform .3s ease-in-out;
+    animation: pop-in .3s ease-in-out;
+}
+
+.node-label {
+    opacity: 1;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 5px;
+    text-anchor: middle;
+    fill: var(--text);
+    border-radius: 0;
+    outline: var(--primary) 0 solid;
+    transition: .2s ease-in-out;
+}
+
+.node-label:hover {
+    fill: var(--primary);
+    outline: var(--primary) 1px solid;
+    border-radius: 5px;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hover-node {
+    pointer-events: none;
+    transform: scale(0);
+    color: var(--text);
+    transition: transform .2s ease-in-out;
+}
+
+.edge {
+    position: relative;
+    z-index: 1;
+    stroke: var(--primary);
+    stroke-width: 1px;
+    stroke-opacity: 0.5;
+}
+
+.node:hover {
+    transform: scale(0.9);
+}
+
+.node:hover ~ .hover-node {
+    transform: scale(1);
+}
+
+#graph-container {
+    overflow: hidden;
+    width: 500px;
+    height: 500px;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+}
+
+#graph-svg {
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+}

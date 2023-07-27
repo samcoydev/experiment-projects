@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Force Directed Graph</title>
+
+    <link href="./css/main.css" type="text/css" rel="stylesheet">
+    <link href="./css/graph.css" type="text/css" rel="stylesheet">
+    <link href="./css/settings.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h3>Force Directed Graph View - by Samuel Coy</h3>
+    </header>
+    <div class="container">
+        <div id="graph-container">
+            <svg id="graph-svg"></svg>
+        </div>
+        <div class="settings">
+            <select id="data-name-select">
+                <option value="cities">Cities</option>
+                <option value="family">Family</option>
+                <option value="names">Names</option>
+                <option value="recipes">Recipes</option>
+            </select>
+            <button class="primary" id="inject-mock" onclick="injectMockData(document.getElementById('data-name-select').value)">Inject Mock Data</button>
+            <button class="success" id="add-node-button" onclick="addNewNode(null)">Add New Node</button>
+            <button class="danger" id="clear-graph" onclick="clearGraph()">Clear Graph</button>
+            <div class="label-group">
+                <label class="label-switch-label" for="toggle-labels-switch">Labels</label>
+                <label id="toggle-labels-switch" class="switch">
+                    <input id="toggle-labels" onclick="toggleLabels()" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/mockData.js"></script>
+</body>
+</html>

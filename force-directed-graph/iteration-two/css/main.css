@@ -1,0 +1,56 @@
+:root {
+    --text: #e0f5ee;
+    --background: #010403;
+    --primary: #4eb2c6;
+    --secondary: #060b13;
+    --accent: #385fad;
+    --success: #4ec65e;
+    --success-muted: #051708;
+    --danger: #c64e4e;
+    --danger-muted: #130606;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    color: var(--text);
+    background: var(--background);
+}
+
+h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding: 0 1rem;
+    align-items: center;
+    color: white;
+}
+
+button.primary {
+    background-color: var(--secondary);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    height: calc(100vh - 50px);
+}
+
+

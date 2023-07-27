@@ -1,0 +1,122 @@
+.settings {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+}
+
+.settings button {
+    font-size: 14px;
+    transition: outline .4s ease-in-out, background-color .02s ease-in-out, transform .02s ease-in-out;
+}
+
+.settings button:hover {
+    outline: 1px solid var(--primary);
+}
+
+.settings button:active {
+    background-color: var(--background);
+    transform: translateY(1px);
+}
+
+button.primary {
+    background-color: var(--secondary);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+button.success {
+    background-color: var(--success-muted);
+    border: 1px solid var(--success);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+button.danger {
+    background-color: var(--danger-muted);
+    border: 1px solid var(--danger);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.settings select {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    background-color: var(--background);
+    color: var(--text);
+    cursor: pointer;
+    transition: outline .4s ease-in-out, background-color .02s ease-in-out, transform .02s ease-in-out;
+}
+
+.label-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-switch-label {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--secondary);
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider:hover {
+    outline: 1px solid var(--accent);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary)
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--accent);
+}
+
+input:checked + .slider:before {
+    transform: translateX(22px);
+}
