@@ -6,6 +6,12 @@ ul li {
     padding: 0;
 }
 
+@media (max-width: 550px) {
+    .instructions {
+        display: none;
+    }
+}
+
 .help {
     display: flex;
     flex-direction: column;

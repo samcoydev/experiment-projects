@@ -29,6 +29,7 @@ h3 {
     font-weight: 400;
 }
 
+
 header {
     display: flex;
     flex-direction: column;
@@ -85,7 +86,7 @@ footer {
     flex-direction: row;
     position: fixed;
     bottom: 0;
-    height: 100px;
+    height: 8vh;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
@@ -104,7 +105,8 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: 2vh;
+    margin-bottom: auto
 }
 
 

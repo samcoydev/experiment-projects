@@ -5,16 +5,7 @@
 
 .node {
     display: flex;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
     cursor: pointer;
-    text-align: center;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
     transform: scale(1);
     transition: transform .3s ease-in-out;
     animation: pop-in .3s ease-in-out;
@@ -75,9 +66,13 @@
 
 #graph-container {
     overflow: hidden;
-    width: 500px;
-    height: 500px;
+    min-width: 300px;
+    min-height: 500px;
+    max-width: 1000px;
+    width: 80vw;
+    height: 50vh;
     border: 1px solid var(--accent);
+    margin: 1vh;
     border-radius: 10px;
 }
 

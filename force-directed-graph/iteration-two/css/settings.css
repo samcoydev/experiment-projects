@@ -4,9 +4,15 @@
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .settings button {
+    border-radius: 10px;
+    width: 9rem;
+    padding: 1rem 1rem;
+    margin: 0.5rem 0.5rem;
+    cursor: pointer;
     font-size: 14px;
     transition: outline .4s ease-in-out, background-color .02s ease-in-out, transform .02s ease-in-out;
 }
@@ -23,33 +29,23 @@
 button.primary {
     background-color: var(--secondary);
     border: 1px solid var(--accent);
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
 }
 
 button.success {
     background-color: var(--success-muted);
     border: 1px solid var(--success);
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
 }
 
 button.danger {
     background-color: var(--danger-muted);
     border: 1px solid var(--danger);
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
-    cursor: pointer;
 }
 
 .settings select {
     font-size: 14px;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
+    margin: 0.5rem 0.5rem;
+    width: 9rem;
     border: 1px solid var(--accent);
     border-radius: 10px;
     background-color: var(--background);
@@ -61,6 +57,7 @@ button.danger {
 .label-group {
     display: flex;
     flex-direction: column;
+    margin: 0 0.5rem;
 }
 
 .label-switch-label {
@@ -123,4 +120,18 @@ input:focus + .slider {
 
 input:checked + .slider:before {
     transform: translateX(22px);
+}
+
+
+
+@media (min-width: 768px) {
+    .settings {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .label-switch-label {
+        flex: 0 0 33%;
+        text-align: left;
+    }
 }
